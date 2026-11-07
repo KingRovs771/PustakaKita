@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm Alabaster #FAF8F5 */
+    --background: 36 33% 97%;
+    /* Slate 800 #1E293B */
+    --foreground: 217 33% 17%;
+
+    /* Pure White #FFFFFF */
+    --card: 0 0% 100%;
+    --card-foreground: 217 33% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 33% 17%;
+
+    /* Deep Teal #0F766E (Teal 700) */
+    --primary: 175 77% 26%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Warm Sand #F1ECE1 */
+    --secondary: 39 36% 91%;
+    --secondary-foreground: 217 33% 17%;
+
+    --muted: 39 30% 92%;
+    /* Slate 600 #475569 */
+    --muted-foreground: 215 19% 35%;
+
+    /* Warm Amber #D97706 (Amber 600) */
+    --accent: 32 95% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive #991B1B */
+    --destructive: 0 74% 35%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Slate 200 #E2E8F0 */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 175 77% 26%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Rich Dark Slate #0F172A (Slate 900) - NOT pure black #000000 to prevent halation */
+    --background: 222 47% 11%;
+    /* Slate 50 #F8FAFC */
+    --foreground: 210 40% 98%;
+
+    /* Slate 800 #1E293B */
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Vibrant Mint Teal #2DD4BF (Teal 400) */
+    --primary: 171 77% 50%;
+    /* Teal 950 #042F2E */
+    --primary-foreground: 179 84% 10%;
+
+    /* Slate 700 #334155 */
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 23%;
+    /* Slate 400 #94A3B8 */
+    --muted-foreground: 215 20% 65%;
+
+    /* Golden Amber #FBBF24 (Amber 400) */
+    --accent: 43 96% 56%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Slate 700 #334155 */
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 171 77% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-foreground;
+  }
+}
+
+/* Custom utility for hiding scrollbars in horizontal category chips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Accessibility: Respect OS Reduced Motion preference (Section 6.3 DESIGN.md) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

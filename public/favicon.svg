@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Rounded Background Container -->
+  <rect width="64" height="64" rx="16" fill="url(#tealGradient)" />
+  
+  <!-- Subtle Inner Border Highlight -->
+  <rect x="1" y="1" width="62" height="62" rx="15" stroke="rgba(255,255,255,0.25)" stroke-width="2" />
+
+  <!-- Open Book Pages Left & Right -->
+  <path d="M32 20 C26 16 18 16 12 18 V44 C18 42 26 42 32 46 C38 42 46 42 52 44 V18 C46 16 38 16 32 20 Z" fill="#FFFFFF" />
+  
+  <!-- Book Spine Center Crease -->
+  <path d="M32 20 V46" stroke="#044E46" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Book Page Text Lines Left -->
+  <path d="M16 26 C20 24.5 25 24.5 28 26" stroke="#0D9488" stroke-width="2" stroke-linecap="round" />
+  <path d="M16 31 C20 29.5 25 29.5 28 31" stroke="#0D9488" stroke-width="2" stroke-linecap="round" />
+  <path d="M16 36 C20 34.5 25 34.5 28 36" stroke="#5EEAD4" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Book Page Text Lines Right -->
+  <path d="M36 26 C39 24.5 44 24.5 48 26" stroke="#0D9488" stroke-width="2" stroke-linecap="round" />
+  <path d="M36 31 C39 29.5 44 29.5 48 31" stroke="#0D9488" stroke-width="2" stroke-linecap="round" />
+  <path d="M36 36 C39 34.5 44 34.5 48 36" stroke="#5EEAD4" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Golden Bookmark Ribbon -->
+  <path d="M30 16 H34 V30 L32 28 L30 30 Z" fill="#F59E0B" />
+
+  <!-- Glowing Literasi Sparkle (Top Right) -->
+  <path d="M51 9 L52.2 12.8 L56 14 L52.2 15.2 L51 19 L49.8 15.2 L46 14 L49.8 12.8 Z" fill="#FBBF24" />
+
+  <defs>
+    <linearGradient id="tealGradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#044E46" />
+    </linearGradient>
+  </defs>
+</svg>
+
